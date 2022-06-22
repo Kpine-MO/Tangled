@@ -139,37 +139,57 @@ h2{
 }
 .sign-up-container{
     position: absolute;
-    background-color: #fff0f0;
-    width: 250px;
-    height: 400px;
-    margin-top: 20px;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),transparent;
+    width: 550px;
+    height: 530px;
+    margin-top: 60px;
     font-family: roboto;
     text-transform: capitalize;
     display: none;
+    border-radius: 15px;
+    margin-left: 365px;
+}
+
+.login-container{
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),transparent;
+    width: 550px;
+    height: 500px;
+    margin-top: 70px;
+    font-family: roboto;
+    text-transform: capitalize;
+    display: none;
+    border-radius: 15px;
+    margin-left: 365px;
+    text-align: center;
 }
 form{
     margin-left: 30px;
 }
 .sign-up-container label{
     display: flex;
+    color: white;
 }
-.sign-up-container form input{
-    height: 30px;
-    margin: 5px 0;
+.sign-up-container input,.login-container  input{
+    height: 35px;
+    margin: 10px 0;
     width: 90%;
     border-radius: 10px;
-    border: none;
-    background-color: #aaaaaa;
+    border: 1px solid lightgray;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),transparent;;
     padding: 0 5px;
+    color: wheat;
 }
 form input:focus{
     outline: none;
 }
+form input::placeholder{
+    color: white;
+}
 .sign-up-top{
-    background-color:#aaaaaa; 
     height: 30px;
-    padding-top: 5px;
-    margin-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 35px;
 }
 #submit-btn{
     background-color: rgb(236, 126, 144);
@@ -178,6 +198,8 @@ form input:focus{
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 2px;
+    height: 40px;
 }
 #submit-btn:hover{
     background-color: rgba(236, 126, 144,0.8)
@@ -186,6 +208,10 @@ h3{
     text-align: center;
     margin-bottom: 15px;
     color: #fff0f0;
+    font-family: roboto;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: xx-large;
 }
 /*discover css*/
 
@@ -281,6 +307,7 @@ h3{
     font-weight: 500;
     list-style: none;
     cursor: pointer;
+    width: fit-content;
 }
 
 .profile li:after{
@@ -296,7 +323,7 @@ h3{
     transition:  0.7s ease;
 }
 .profile li:hover::after{
-    width: 30%;
+    width: 100%;
 
 }
 
