@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Nuosu+SIL&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Nuosu+SIL&family=Roboto:wght@300&family=Tiro+Devanagari+Sanskrit&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto,sans-serif;
+}
+
+#nav-bar{
+    width: 100%;
+    height: 70px;
+    background-color: #fff0f0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    margin-left:200px;
+}
+
+ul a{
+    text-decoration: none;
+    list-style: none;
+}
+
+nav li{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    margin: 25px 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+nav li:after{
+    content: "";
+    position: absolute;
+    background-color: #565656;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -25px;
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+}
+nav li:hover::after{
+    width: 100%;
+}
+#logo{
+    height: 70px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+
+nav button{
+    width: 100px;
+    height: 50px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 87%;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+ #btn{
+    margin-right: 55px;
+    margin-top: 10px;
+ }
+
+ #sign-up{
+    background-color: #565656;
+    color: #fff0f0;
+    outline: none;
+ }
+#hero{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url(../assets/images/hero.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+h1{
+    color: rgb(250, 218, 158);
+    text-transform: capitalize;
+    font-family: Tiro Devanagari Sanskrit;
+    font-size: 50px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+h2{
+    color: pink;
+    padding-top:20%;
+    text-transform: capitalize;
+    font-family: Nanum Myeongjo;
+    font-size: xx-large;
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+.titles{
+    padding-left: 150px;
+}
+
+.topic{
+    padding-left: 150px;
+    color: #fff0f0;
+    
+}
+#hero-btn{
+    margin-left: 150px;
+    margin-top: 120px;
+    width: 150px;
+    height: 50px;
+    color: black;
+    background-color: rgb(236, 126, 144);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: larger;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+#hero-btn:hover{
+
+    background-color: rgba(236, 126, 144,0.8);
+}
+.sign-up-container{
+    position: absolute;
+    background-color: #fff0f0;
+    width: 250px;
+    height: 400px;
+    margin-top: 20px;
+    font-family: roboto;
+    text-transform: capitalize;
+    display: none;
+}
+form{
+    margin-left: 30px;
+}
+.sign-up-container label{
+    display: flex;
+}
+.sign-up-container form input{
+    height: 30px;
+    margin: 5px 0;
+    width: 90%;
+    border-radius: 10px;
+    border: none;
+    background-color: #aaaaaa;
+    padding: 0 5px;
+}
+form input:focus{
+    outline: none;
+}
+.sign-up-top{
+    background-color:#aaaaaa; 
+    height: 30px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+#submit-btn{
+    background-color: rgb(236, 126, 144);
+    text-transform: capitalize;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#submit-btn:hover{
+    background-color: rgba(236, 126, 144,0.8)
+}
+h3{
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff0f0;
+}
+/*discover css*/
+
+#discover{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.left{
+    background: linear-gradient( 0.25turn, rgb(236, 126, 144),#a5a3a3);
+    width: 400px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left img{
+    border-radius: 50%;
+    width: 50px;
+    margin: 10px;
+}
+.fa-group-arrows-rotate{
+    color: rgb(134, 44, 59);
+    cursor: pointer;
+}
+.fa-heart-circle-bolt{
+    color: rgb(134, 44, 59);
+    padding-top: 30px;
+    padding-right: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+ .right{
+    background-color: #F7F0E8;
+    width: 100%;
+ }
+ .right form{
+    text-align: center;
+    border: 1px solid rgb(236, 126, 144);
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 20px;
+ }
+
+ .right form .text{
+    height: 30px;
+    border: none;
+    border-right: 1px solid rgb(236, 126, 144);
+    background-color: #F7F0E8;
+    text-transform: capitalize;
+    padding-left: 25px;
+ }
+.fa-searchengin{
+    position: absolute;
+    padding-top: 10px;
+}
+
+#profile-btn{
+    width: 70px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(236, 126, 144);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+#profile-btn:hover{
+    background-color: rgba(236, 126, 144,0.8);
+    
+}
+#users{
+    display: flex;
+    justify-content: center;
+}
+#users img{
+    height: 570px;
+    border-radius: 35px;
+    text-align: center;
+}
+
+.profile li{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    margin: 25px 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    list-style: none;
+    cursor: pointer;
+}
+
+.profile li:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(134, 44, 59);
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -15px;
+    margin: 0;
+    padding: 0;
+    transition:  0.7s ease;
+}
+.profile li:hover::after{
+    width: 30%;
+
+}
+
+#contact{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #e9c6c6;
+    height: 200px;
+}
+
+#contact h6, h4{
+    color: #565656;
+    font-size: large;
+    font-family: roboto;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.footer-links i{
+    padding: 10px;
+    background-color: #af9b9b;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#contact li{
+    list-style: none;
+    margin: 20px;
+    margin-left: 0;
+}
+
+#contact p{
+    margin: 10px 0;
+
+}
+
+.footer-btn{
+    margin-top: 10px;
+    height: 35px;
+    width: 180px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+.fa-paper-plane{
+    background-color: rgb(236, 126, 144);
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    margin-left: -4px;
+    padding: 8px;
+}
+
+
+
