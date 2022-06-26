@@ -21,9 +21,9 @@
 						alt="logo"
 					/>
 					<ul class="magic">
-						<a href="#nav-bar"><li class="nav_li">home</li></a>
+						<a href="#explore"><li class="nav_li">home</li></a>
 						<a href="#explore"><li class="nav_li">explore</li></a>
-						<a href="#discover"><li class="nav_li">match</li></a>
+						<a href="#discover"><li class="nav_li">blog</li></a>
 						<a href="#testimonials"><li class="nav_li">testimonials</li></a>
 						<a href="#contact"><li class="nav_li">contact</li></a>
 					</ul>
@@ -80,11 +80,13 @@
 			<div id="hero">
 				<div class="titles">
 					<h2>find your</h2>
-					<h1>perfect partner</h1>
+					<h1>perfect blog</h1>
 				</div>
-				<p class="topic">We are devotrd to helping you find love.</p>
+				<p class="topic">
+					We are devotrd to helping you find truth through others.
+				</p>
 
-				<button id="hero-btn">get started</button>
+				<a href="#discover"><button id="hero-btn">get started</button></a>
 			</div>
 		</section>
 		<section id="discover">
@@ -108,23 +110,33 @@
 			</div>
 			<div class="right">
 				<form action="" class="search_blog">
-					<i class="fa-brands fa-searchengin"></i>
-					<input class="text" type="text" placeholder="name" />
-					<input class="text" type="text" placeholder="location" />
-					<input class="text" type="text" placeholder="gender" />
-					<input type="submit" id="profile-btn" value="submit" />
+					<input class="text" type="text" placeholder="search by title" />
+					<input type="submit" id="profile-btn" value="search" />
 				</form>
 				<div id="users">
+					<button id="green-btn" onclick="addPost()">add blog</button>
 
-					<button id="green-btn" onclick="addPost()">add post</button>
-
-					<form action="" id="add_post" class="addpost" style="display: none;">
+					<form action="" id="add_post" class="addpost" style="display: none">
 						<label for="titl"></label>
-						<textarea name="title" id="post_title" cols="30" rows="2" placeholder="add title"></textarea>
+						<textarea
+							name="title"
+							id="post_title"
+							required
+							cols="30"
+							rows="2"
+							placeholder="add title"
+						></textarea>
 						<label for="body"></label>
-						<textarea name="body" id="post_body" cols="30" rows="5" placeholder="add post"></textarea>
+						<textarea
+							name="body"
+							id="post_body"
+							required
+							cols="30"
+							rows="5"
+							placeholder="add post"
+						></textarea>
 						<label for="button"></label>
-						<input type="button" class="post_btn" value="post">
+						<input type="submit" class="post_btn" value="post" />
 					</form>
 
 					<!--<img
@@ -207,5 +219,3 @@
 		<script src="./src/app.js"></script>
 	</body>
 </html>
-
-

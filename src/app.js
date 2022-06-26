@@ -45,18 +45,21 @@ document.querySelector("#profile-btn").addEventListener("click",function(e) {
          const heading = document.createElement('h2')
          heading.innerHTML=object[index].title
          heading.classList.add("color")
-         const btn = document.createElement("button")
-         btn.innerHTML = 'Read '
-
-         blog.appendChild(btn)
-
 
          blog.appendChild(heading)
 
          const body = document.createElement('p')
          body.innerHTML=object[index].body
+         body.classList.add("description")
 
          blog.appendChild(body)
+
+         const btn = document.createElement("button")
+         btn.innerHTML = 'Read more'
+         btn.classList.add("read")
+
+         blog.appendChild(btn)
+
       }
      })
 })
@@ -65,20 +68,31 @@ const postForm = document.querySelector("#add_post")
 
 postForm.addEventListener("submit",function(e) {
      e.preventDefault()
-     fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  body: JSON.stringify({
-    title: 'foo',
-    body: 'bar',
-    userId: 1,
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
-  },
-})
-  .then((response) => response.json())
-  .then((json) => console.log(json));
-})
+
+     const title= document.getElementById('post_title').value;
+     const body= document.getElementById('post_body').value;
+     const userId=1
+     var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+     var raw = JSON.stringify({
+      "title": title,
+      "body": body,
+      "userId": 1,
+    });
+    
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+    
+    fetch("https://jsonplaceholder.typicode.com/posts", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+
+     })
 
 
 
