@@ -1,3 +1,35 @@
+function login() {
+   let users = [
+      {
+        id:1,
+        username:"Balaji",
+        password:"tyu",
+        email:"hello@hotmail.com"
+      },
+   
+      {
+        id:1,
+        username:"John",
+        password:"test",
+        email:"hellojohn@hotmail.com"
+      }
+    ]
+   
+    let username = document.getElementById("username");
+    let password = document.getElementById("password");
+   
+   
+    let loggedInUser={}
+    for (let index = 0; index < users.length; index++) {
+      if(Object.values(users[index])[0]==username && Object.values(users[index])[1]==password){
+                // redirect to login
+                loggedInUser= users[index]
+      }
+   
+    }
+   
+    console.log(loggedInUser)
+}
 
 function showMenu() {
  let show = document.querySelector('.magic');
@@ -179,7 +211,36 @@ function showUpdate() {
 }
 
 
+document.querySelector("#update").addEventListener("submit", (e) => {
+   e.preventDefault();
 
+   const id = document.getElementById("id_area").value
+   const userID = document.getElementById("userID_area").value
+   const updateTitle = document.getElementById("title_area").value
+   const updateBody = document.getElementById("body_area")
+
+   var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "id": id,
+  "title": userID,
+  "body": updateTitle,
+  "userId": updateBody
+});
+
+var requestOptions = {
+  method: 'PUT',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://jsonplaceholder.typicode.com/posts/1", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+})
 
 
 

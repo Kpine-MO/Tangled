@@ -163,7 +163,7 @@ h2{
     margin-top: 70px;
     font-family: roboto;
     text-transform: capitalize;
-    display: none;
+    display: block;
     border-radius: 15px;
     margin-left: 365px;
     text-align: center;
