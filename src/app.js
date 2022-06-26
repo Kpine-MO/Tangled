@@ -72,12 +72,14 @@ document.querySelector('#sign-up').addEventListener('click', function() {
 
          deleteBtn.addEventListener("click",function(){
             deletePost()
+
          })
 
 
          const blogid = document.createElement('h4')
          blogid.classList.add("hidden")
          blogid.innerHTML=object[index].id
+         blogid.style.visibility = "hidden"
 
          blog.appendChild(blogid)
 
@@ -140,11 +142,41 @@ postForm.addEventListener("submit",function(e) {
     }
 
 function test(){
-   alert("hjkl")
+   alert("it works")
 }
 
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
 
+var raw = JSON.stringify({
+  "id": 1,
+  "title": "foo",
+  "body": "bar",
+  "userId": 1
+});
 
+var requestOptions = {
+  method: 'PUT',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://jsonplaceholder.typicode.com/posts/1", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+function showUpdate() {
+   let updateBtn = document.querySelector("#update");
+
+  if (updateBtn.style.display == 'none') {
+   console.log('hello')
+   updateBtn.style.display="block";
+} else {
+   updateBtn.style.display="none";
+}
+}
 
 
 

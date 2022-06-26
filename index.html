@@ -115,9 +115,9 @@
 				</form>
 				<div id="users">
 					<button id="green-btn" onclick="addPost()">add blog</button>
-
+                    <button class="update" onclick="showUpdate()">update</button>
 					<form action="" id="add_post" class="addpost" style="display: none">
-						<label for="titl"></label>
+						<label for="title"></label>
 						<textarea
 							name="title"
 							id="post_title"
@@ -137,6 +137,19 @@
 						></textarea>
 						<label for="button"></label>
 						<input type="submit" class="post_btn" value="post" />
+					</form>
+
+					<form action="" id="update">
+                        <label for="id"></label>
+						<textarea name="ID" id="id_area" cols="30" rows="2" placeholder="ID"></textarea>
+						<label for="userid"></label>
+						<textarea name="userid" id="userID_area" cols="30" rows="2" placeholder="userID"></textarea>
+						<label for="title"></label>
+						<textarea name="title" id="title_area" cols="30" rows="2" placeholder="title"></textarea>
+						<label for="body"></label>
+						<textarea name="body" id="blog_area" cols="30" rows="6" placeholder="update blog"></textarea>
+						<label for="button"></label>
+						<input type="submit" class="post_btn" value="update" />
 					</form>
 					<!--<img
 						src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"

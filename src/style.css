@@ -291,6 +291,7 @@ h3{
     margin-left: 10px;
     cursor: pointer;
 }
+
  .right{
     background-color: #F7F0E8;
     width: 100%;
@@ -370,7 +371,7 @@ h3{
     text-transform: capitalize;
 }
 
-#users .read{
+#users .read, #users .delete{
     margin: 30px;
     height: 40px;
     width: 100px;
@@ -382,7 +383,23 @@ h3{
     border-radius: 5px;
 }
 
+#users .delete{
+   background-color: red;
+}
 
+#users .update{
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 30px;
+    height: 40px;
+    width: 100px;
+    background-color: lightgreen;
+    float: right;
+    margin-top: -60px;
+ }
 
 .user-info{
     position: absolute;
@@ -415,6 +432,8 @@ h3{
     font-size: large;
     padding-right: 10px;
 }
+
+
 #user_info_icon i{
     padding: 0 30px;
     cursor: pointer;
@@ -487,7 +506,7 @@ h3{
     margin: 20px;
     margin-left: 0;
 }
-
+label
 #contact p{
     margin: 10px 0;
 
@@ -566,11 +585,31 @@ h3{
     display: none;
 }
 
-#add_post label{
+#add_post label {
     display: flex;
     text-transform: capitalize;
     margin-top: 0;
 }
+
+#update{
+    position: absolute;
+    right: 120px;
+    bottom: -390px;
+    display: none;
+}
+
+#update label{
+    display: flex;
+}
+
+#update textarea{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(184, 184, 184);
+    border: none;
+    outline: none;
+}
+
 
 #add_post{
     border: none;
@@ -583,7 +622,7 @@ h3{
     color: black;
     border-radius: 10px;
     padding: 10px;
-    background: white;
+    background: rgb(184, 184, 184);
     border: none;
     outline: none;
 }
@@ -592,6 +631,8 @@ h3{
     color: black;
     text-transform: capitalize;
 }
+
+
 
 .post_btn{
     cursor: pointer;
