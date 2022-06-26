@@ -115,6 +115,18 @@
 					<input type="submit" id="profile-btn" value="submit" />
 				</form>
 				<div id="users">
+
+					<button id="green-btn" onclick="addPost()">add post</button>
+
+					<form action="" id="add_post" class="addpost" style="display: none;">
+						<label for="titl"></label>
+						<textarea name="title" id="post_title" cols="30" rows="2" placeholder="add title"></textarea>
+						<label for="body"></label>
+						<textarea name="body" id="post_body" cols="30" rows="5" placeholder="add post"></textarea>
+						<label for="button"></label>
+						<input type="button" class="post_btn" value="post">
+					</form>
+
 					<!--<img
 						src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 						alt=""
@@ -132,10 +144,11 @@
 					</div>
 				-->
 
-					<div class="blog_title">
+					<!--<div class="blog_title">
 						<h3>Title goes here</h3>
-					</div>
+					 </div>
 					<div class="body">
+
 						<div class="visual">
 							<img src="./assets/images/cht.jpeg" alt="" />
 						</div>
@@ -156,7 +169,7 @@
 							<p>author:"name"</p>
 						</div>
 					</div>
-					<button class="blog_btn">more</button>
+					<button class="blog_btn">more</button> -->
 				</div>
 			</div>
 		</section>
@@ -194,3 +207,5 @@
 		<script src="./src/app.js"></script>
 	</body>
 </html>
+
+
