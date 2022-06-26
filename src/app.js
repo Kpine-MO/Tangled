@@ -42,6 +42,7 @@ function showMenu() {
  }
 
 }
+
 function addPost() {
   let btn = document.querySelector(".addpost");
 
@@ -62,6 +63,16 @@ document.querySelector('#sign-up').addEventListener('click', function() {
       show.style.display="block";
    } else {
       show.style.display="none";
+   }
+})
+document.querySelector('#login').addEventListener('click', function() {
+   let showLogin = document.querySelector('.login-container');
+
+   if (showLogin.style.display == 'none') {
+      console.log('hello')
+      showLogin.style.display="block";
+   } else {
+      showLogin.style.display="none";
    }
 })
 
