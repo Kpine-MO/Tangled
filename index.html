@@ -26,15 +26,9 @@
 						<a href="#discover"><li class="nav_li">blog</li></a>
 						<a href="#testimonials"><li class="nav_li">testimonials</li></a>
 						<a href="#contact"><li class="nav_li">contact</li></a>
+						<button id="login">login</button>
+						<button id="sign-up">sign up</button>
 					</ul>
-					<div id="btn" class="magic">
-						<div>
-							<button id="login">login</button>
-						</div>
-						<div>
-							<button id="sign-up">sign up</button>
-						</div>
-					</div>
 				</nav>
 				<div class="menu">
 					<i class="fa-solid fa-2x fa-bars" onclick="showMenu()"></i>
@@ -67,9 +61,14 @@
 				</div>
 				<form action="" id="login_form">
 					<div class="login_inputs">
-						<input type="text" placeholder="username" required/>
+						<input type="text" placeholder="username" required />
 						<input type="password" required />
-						<input type="submit" value="login" id="login_form_btn" onclick="login()" />
+						<input
+							type="submit"
+							value="login"
+							id="login_form_btn"
+							onclick="login()"
+						/>
 					</div>
 					<a href="#" class="login_bottom">Forgot password</a
 					><a href="#" class="login_bottom">SIGN UP</a>
@@ -115,7 +114,7 @@
 				</form>
 				<div id="users">
 					<button id="green-btn" onclick="addPost()">add blog</button>
-                    <button class="update" onclick="showUpdate()">update</button>
+					<button class="update" onclick="showUpdate()">update</button>
 					<form action="" id="add_post" class="addpost" style="display: none">
 						<label for="title"></label>
 						<textarea
@@ -140,14 +139,38 @@
 					</form>
 
 					<form action="" id="update">
-                        <label for="id"></label>
-						<textarea name="ID" id="id_area" cols="30" rows="2" placeholder="ID"></textarea>
+						<label for="id"></label>
+						<textarea
+							name="ID"
+							id="id_area"
+							cols="30"
+							rows="2"
+							placeholder="ID"
+						></textarea>
 						<label for="userid"></label>
-						<textarea name="userid" id="userID_area" cols="30" rows="2" placeholder="userID"></textarea>
+						<textarea
+							name="userid"
+							id="userID_area"
+							cols="30"
+							rows="2"
+							placeholder="userID"
+						></textarea>
 						<label for="title"></label>
-						<textarea name="title" id="title_area" cols="30" rows="2" placeholder="title"></textarea>
+						<textarea
+							name="title"
+							id="title_area"
+							cols="30"
+							rows="2"
+							placeholder="title"
+						></textarea>
 						<label for="body"></label>
-						<textarea name="body" id="blog_area" cols="30" rows="6" placeholder="update blog"></textarea>
+						<textarea
+							name="body"
+							id="blog_area"
+							cols="30"
+							rows="6"
+							placeholder="update blog"
+						></textarea>
 						<label for="button"></label>
 						<input type="submit" class="post_btn" value="update" />
 					</form>
